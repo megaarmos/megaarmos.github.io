@@ -25,6 +25,7 @@ body {
 }
 
 .navbar#navbar {
+  top: 0;
   background-color: #222;
   z-index: 1000;
   transition: padding 0.2s ease-in-out;
