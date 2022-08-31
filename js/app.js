@@ -60,7 +60,11 @@ const burger = document.getElementById('icon-burger');
 const btn_nav = document.getElementsByClassName('nav-link')
 
 for (var i = 0, length = btn_nav.length; i < length; i++) {
-    btn_nav[i].addEventListener('click', () => { burger.click() })
+    btn_nav[i].addEventListener('click', () => { 
+        if (window.innerWidth < 992) {
+            burger.click()
+        }
+     })
   }
 
 function stickyNavbar() {
