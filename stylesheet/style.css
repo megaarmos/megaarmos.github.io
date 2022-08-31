@@ -10,7 +10,7 @@
 }
 
 html {
-  //scroll-padding: 72px;
+  scroll-padding: 72px;
 }
 
 *,
@@ -18,10 +18,6 @@ body,
 html {
   font-family: "Rubik", sans-serif;
   --bs-body-font-family: "Rubik", sans-serif;
-}
-
-body {
-  scroll-padding-top: var(--scroll-padding-top);
 }
 
 .navbar#navbar {

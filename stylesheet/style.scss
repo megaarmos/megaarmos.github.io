@@ -17,11 +17,8 @@ html {
     --bs-body-font-family: 'Rubik', sans-serif;
 }
 
-body {
-    scroll-padding-top: var(--scroll-padding-top);
-}
-
 .navbar#navbar {
+    top: 0;
     background-color: #222;
     z-index: 1000;
     transition: padding .2s ease-in-out;
