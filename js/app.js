@@ -1,7 +1,21 @@
+const navbar = document.getElementById("navbar")
+var prevScrollpos = window.pageYOffset;
+
 window.addEventListener('scroll', () => {
     stickyNavbar()
     activeNavigationButton()
+    hideNavbar()
 })
+
+function hideNavbar() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        navbar.classList.remove('hide')
+    } else {
+        navbar.classList.add('hide')
+    }
+    prevScrollpos = currentScrollPos;
+  }
 
 function activeNavigationButton() {
     let offset = 300
@@ -42,7 +56,12 @@ function activeNavigationButton() {
     }
 }
 
-const navbar = document.getElementById("navbar")
+const burger = document.getElementById('icon-burger');
+const btn_nav = document.getElementsByClassName('nav-link')
+
+for (var i = 0, length = btn_nav.length; i < length; i++) {
+    btn_nav[i].addEventListener('click', () => { burger.click() })
+  }
 
 function stickyNavbar() {
     if (window.scrollY > 0) {

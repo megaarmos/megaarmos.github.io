@@ -21,7 +21,7 @@ html {
     top: 0;
     background-color: #222;
     z-index: 1000;
-    transition: padding .2s ease-in-out;
+    transition: padding .2s ease-in-out, transform .3s ease-in-out;
 
     &::before {
         content: '';
@@ -55,6 +55,10 @@ html {
         &:hover {
             color: #4458dc;
         }
+    }
+
+    &.hide{
+        transform: translateY(-100%);
     }
 }
 
@@ -356,6 +360,7 @@ footer {
 
     .navbar#navbar {
         background-color: #fff;
+        transition: padding .2s ease-in-out;
 
         .nav-item {
             border-bottom: none !important;
@@ -368,6 +373,10 @@ footer {
             &:hover {
                 color: #4458dc;
             }
+        }
+
+        &.hide{
+            transform: translateY(0);
         }
     }
 }
