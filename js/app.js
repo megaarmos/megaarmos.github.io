@@ -1,6 +1,11 @@
 const navbar = document.getElementById("navbar")
 var prevScrollpos = window.pageYOffset;
 
+window.addEventListener('load', (event) => {
+    document.getElementById('load-screen').classList.add("hide")
+    stickyNavbar()
+})
+
 window.addEventListener('scroll', () => {
     stickyNavbar()
     activeNavigationButton()
