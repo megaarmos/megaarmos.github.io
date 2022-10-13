@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth scroll-p-20" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet/loader.css" rel="stylesheet">
-    <link rel="icon" href="images/ico.png" type="image/png">
-    <link rel="stylesheet" href="stylesheet/style.css">
-    <!-- CSS only -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- Lottie -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/stylesheet.min.css">
+    <link rel="stylesheet" href="./css/font.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>Document</title>
 </head>
 
-<body class="g-3">
-    <div class="load-wrapper" id="load-screen">
+<body class="dark:bg-zinc-800">
+        <div class="load-wrapper" id="load-screen">
         <div class="loader"></div>
     </div>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark position-fixed w-100">
-        <div class="container-md container-fluid">
-            <a class="navbar-brand" href="#"><img class="logo" src="images/logo.svg" alt="ARION PAUL"></a>
-            <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
+    <nav class="navbar shadow-lg shadow-transparent transition-shadow duration-300">
+        <div class="navbar-container">
+            <a class="" href="#">
+                <img class="py-1.5" src="images/logo.svg" alt="ARION PAUL">
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="dropdown" data-target="#navbarCollapse">
                 <div id="icon-burger">
                     <span></span>
                     <span></span>
@@ -34,170 +31,168 @@
                     <span></span>
                 </div>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav ms-auto me-0 mt-3 mt-lg-0 gap-3">
-                    <li class="nav-item border-bottom">
-                        <a id="btn-home" class="nav-link active py-3 text-uppercase" href="#">Home</a>
-                    </li>
-                    <li class="nav-item border-bottom">
-                        <a id="btn-about" class="nav-link py-3 text-uppercase" href="#aboutme">About me</a>
-                    </li>
-                    <li class="nav-item border-bottom">
-                        <a id="btn-works" class="nav-link py-3 text-uppercase" href="#myworks">My Works</a>
+            <div class="navbar-collapse collapsed" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="btn-home" class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="btn-contact" class="nav-link py-3 text-uppercase" href="#contact">Contact</a>
+                        <a id="btn-about" class="nav-link" href="#aboutme">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btn-works" class="nav-link" href="#myworks">My Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btn-contact" class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <section class="overflow-hidden">
-        <div class="container-md container-fluid">
-            <div class="row align-items-center vh-100">
-                <div class="col-lg-7 col-12">
-                    <h2 class="text-uppercase mb-3 hello">Hello</h2>
-                    <h1 class="text-uppercase mb-3">I AM Arion Paul</h1>
-                    <h3 class="text-uppercase mb-5">Middle FRONTEND DEVELOPER</h3>
-                    <div class="d-flex gap-4">
-                        <a href="#aboutme" class="btn btn-primary text-uppercase" role="button"><span>About ME</span></a>
-                        <a href="#" class="btn btn-outline-primary text-uppercase" role="button"><span>Get CV</span></a>
+        <div class="container">
+            <div class="flex items-center h-screen max-h-[1440px] gap-6">
+                <div class="w-full lg:w-7/12">
+                    <h2 class="uppercase mb-4 hello font-medium dark:text-white text-2xl sm:text-3xl uppercase text-neutral-800">Hello</h2>
+                    <h1 class="uppercase mb-4 font-medium dark:text-white text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl text-neutral-800">I AM Arion Paul</h1>
+                    <h3 class="uppercase mb-12 font-medium dark:text-white text-2xl sm:text-3xl text-neutral-800">Middle FRONTEND DEVELOPER</h3>
+                    <div class="flex gap-6">
+                        <a href="#myworks" class="btn btn-primary uppercase" role="button"><span>About ME</span></a>
+                        <a href="#" class="btn btn-outline-primary uppercase dark:text-white" role="button"><span>Get CV</span></a>
                     </div>
                 </div>
-                <div class="col-5 d-none d-lg-inline">
-                    <img class="w-100" src="images/coding.svg" alt="coding image">
+                <div class="hidden lg:block w-5/12">
+                    <img class="w-full" src="images/coding.svg" alt="coding image">
                 </div>
             </div>
         </div>
     </section>
-    <section id="aboutme" class="container-md container-fluid">
-        <div class="row align-items-center vh-100">
-            <div class="col-6 d-none d-lg-block">
-                <img class="w-100 pe-5" src="images/table.svg" alt="coding image">
-            </div>
-            <div class="col-lg-6 col-12">
-                <h2 class="text-uppercase mb-3">Let me introduce myself</h2>
-                <p class="mb-5">
-                    My name is Arion, and I'm a frontend developer. My job is to create impressive visual for
-                    websites. I read a lot articles and keep track of new technologies to make my products better.
-                    <br>
-                    <br>
-                    For 3 years I've been making  websites and web design projects, currently I'm working as a frontend
-                    developer, creating E-commerce templates for Opencart. Apart from it my hobby is to create 3d graphics.
-                </p>
-                <a href="#myworks" class="btn btn-primary" role="button"><span>SEE MY WORKS</span></a>
-            </div>
-        </div>
-    </section>
-    <section class="container-md container-fluid">
-        <div class="row justify-content-center py-5 my-5">
-            <div class="tech-stack col-12 col-lg-7 col-xl-8 col-xxl-9 mb-5 mb-lg-0">
-                <h2 class="text-center text-lg-start text-uppercase mb-5">I use in my projects</h2>
-                <div
-                    class="row row-cols-4 row-cols-xl-5 row-cols-xxl-6 justify-content-center justify-content-lg-start justify-content-xxl-center gap-4">
-                    <div>
-                        <div class="image"><img src="/images/lottiefiles-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/bootstrap-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/tailwind-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/css-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/html-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/js-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/angular-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/ionic-gray.svg" alt=""></div>
-                    </div>
-                    <div>
-                        <div class="image"><img src="/images/typescript-gray.svg" alt=""></div>
+    <section id="aboutme" class="overflow-hidden">
+        <div class="container">
+            <div class="flex items-center h-screen max-h-[1440px] gap-6">
+                <div class="hidden lg:block w-6/12">
+                    <img class="w-full pr-12" src="images/table.svg" alt="sitting image">
+                </div>
+                <div class="w-full lg:w-6/12">
+                    <h2 class="title-section mb-4">Let me introduce myself</h2>
+                    <p class="mb-12 opacity-70 dark:text-white">
+                        My name is Arion, and I'm a frontend developer. My job is to create impressive visual for
+                        websites. I read a lot articles and keep track of new technologies to make my products better.
+                        <br>
+                        <br>
+                        For 3 years I've been making  websites and web design projects, currently I'm working as a frontend
+                        developer, creating E-commerce templates for Opencart. Apart from it my hobby is to create 3d graphics.
+                    </p>
+                    <div class="flex">
+                        <a href="#myworks" class="btn btn-primary uppercase" role="button"><span>SEE MY WORKS</span></a>
                     </div>
                 </div>
             </div>
-            <div class="col-auto col-lg-5 col-xl-4 col-xxl-3 mt-5 mt-lg-0">
-                <div class="box p-4 p-md-5">
-                    <div class="d-flex justify-content-center align-items-center gap-4 pb-5 mb-3">
-                        <h2 class="m-0">2</h2>
-                        <p class="text-uppercase m-0">
-                            Years <br>
-                            Experience <br>
-                            Working
-                        </p>
-                    </div>
-                    <div class="email d-flex align-items-center gap-3 pt-4">
-                        <i class="icon-envelope-open"></i>
-                        <div>
-                            <p class="text mb-0 text-uppercase">MY email</p>
-                            <p class="email-addres mb-0 fs-6">paularion007@gmail.com</p>
+        </div>
+    </section>
+    <section class="overflow-hidden">
+        <div class="container">
+            <div class="flex content-center flex-col lg:flex-row py-12 my-12">
+                <div class="w-full lg:w-7/12 xl:w-8/12 2xl:w-9/12 mb-12 lg:mb-0">
+                    <h2 class="title-section text-center lg:text-start mb-12">I use in my projects</h2>
+                    <div class="flex flex-wrap row-cols-4 xl:row-cols-5 2xl:row-cols-6 justify-center lg:justify-start 2xl:justify-center lg:pr-8 2xl:pr-24 gap-6">
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/lottiefiles-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/bootstrap-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/tailwind-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/css-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/html-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/js-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/angular-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/ionic-gray.svg" alt="">
+                        </div>
+                        <div class="flex justify-center">
+                            <img class="p-3 md:p-4 border border-neutral-400" src="images/typescript-gray.svg" alt="">
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section id="myworks" class="container-md container-fluid py-5">
-        <h2 class="text-center text-lg-start text-uppercase mb-5">My projects</h2>
-        <div class="d-flex flex-column gap-5" id="g-for-card">
-            <div class="card">
-                <div class="row g-0 flex-column flex-lg-row">
-                    <div class="col-lg-4 col-xl-3 order-last order-lg-first">
-                        <div class="card-body h-100 d-flex flex-column justify-content-between">
-                            <div class="mb-5">
-                                <h5 class="card-title">{{ title }}</h5>
-                                <p class="card-text">
-                                    {{ text }}
-                                </p>
+                <div class="flex justify-center items-start lg:w-5/12 xl:w-4/12 2xl:w-3/12 mt-12 lg:mt-0">
+                    <div class="quick-box relative max-w-fit bg-gray-100 dark:bg-zinc-900 p-6 md:p-12 before:hidden after:hidden before:sm:block after:sm:block">
+                        <div class="flex justify-center items-center relative z-10 gap-6 pb-12 mb-4">
+                            <h2 class="text-8xl font-medium text-indigo-500">2</h2>
+                            <p class="text-xl text-neutral-800 dark:text-neutral-50 font-medium uppercase">
+                                Years <br>
+                                Experience <br>
+                                Working
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-6">
+                            <i class="icon-envelope-open text-5xl md:text-6xl text-neutral-800 dark:text-neutral-100"></i>
+                            <div>
+                                <p class="text-uppercase text-neutral-800 dark:text-neutral-50">MY email</p>
+                                <p class="font-medium text-neutral-800 dark:text-neutral-50">paularion007@gmail.com</p>
                             </div>
-                            <p class="card-text"><small class="text-muted">{{ date }}</small></p>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-xl-9">
-                        <img src="{{ image }}" class="img-fluid" alt="...">
-                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="row g-0 flex-column flex-lg-row">
-                    <div class="col-lg-4 col-xl-3 order-last order-lg-first">
-                        <div class="card-body h-100 d-flex flex-column justify-content-between">
-                            <h5 class="card-title">Coming Soon</h5>
-                        </div>
-                    </div>
-                    <div style="background-color: #110f28;" class="col-lg-8 col-xl-9">
-                        <lottie-player class="coming-soon" src="./images/sleepy.json" background="transparent" speed="1"
-                            loop="" autoplay="">
-                        </lottie-player>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section id="contact" class="box-contact">
-        <div class="container-md container-fluid">
-            <div class="body-contact text-center text-white py-5">
-                <img class="bubles" src="images/bubles.svg" alt="">
-                <h3 class="pt-5 mt-5 fs-4">CONTACT WITH ME HERE</h3>
-                <p class="px-4 mb-5 fs-6">You can contact with me any time you want.</p>
-                <h3 class="pb-5 mb-5 fs-5">paularion007@gmail.com</h3>
-                <i class="icon-lightbulb-alt"></i>
             </div>
         </div>
     </section>
-    <footer class="py-5">
-        <div class="container-md container-fluid py-5">
-            <div class="d-flex flex-column justify-content-center">
-                <a class="text-center mb-5" href="#"><img class="logo" src="images/logo.svg" alt="ARION PAUL"></a>
-                <h4 class="text-center gray mb-4">Follow Me</h4>
-                <div class="d-flex justify-content-center gap-4">
+    <section id="myworks" class="container mt-12 py-12">
+        <h2 class="title-section mb-12">My projects</h2>
+        <div class="flex flex-col gap-12" id="g-for-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-12">
+                        <h5 class="card-title">{{ title }}</h5>
+                        <p class="card-text">{{ text }}</p>
+                    </div>
+                    <p class="card-date"><small>{{ date }}</small></p>
+                </div>
+                <div class="card-image">
+                    <img src="{{ image }}" class="" alt="...">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-12">
+                        <h5 class="card-title">Coming soon</h5>
+                    </div>
+                </div>
+                <div class="card-image h-72 xl:h-96" style="background-color: #110f28;">
+                    <lottie-player class="coming-soon" src="./images/sleepy.json" background="transparent" speed="1"
+                        loop="" autoplay="">
+                    </lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="">
+        <div class="container">
+            <div class="box-contact text-center text-white py-12">
+                <img class="bubles translate-x-24 lg:translate-x-48 xl:translate-x-80 absolute" src="images/bubles.svg" alt="">
+                <h3 class="pt-12 mt-12 text-2xl font-medium">CONTACT WITH ME HERE</h3>
+                <p class="px-4 mb-12">You can contact with me any time you want.</p>
+                <h3 class="pb-12 mb-12 text-xl font-medium">paularion007@gmail.com</h3>
+                <i class="icon-lightbulb-alt absolute translate-x-40 md:translate-x-64 -translate-y-32 md:-translate-y-40 text-2xl"></i>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-100 dark:bg-zinc-900 relative py-12">
+        <div class="container py-12">
+            <div class="flex flex-col justify-center">
+                <a class="flex justify-center mb-12" href="#"><img class="w-44" src="images/logo.svg" alt="ARION PAUL"></a>
+                <h4 class="text-center text-2xl dark:text-white font-medium mb-6">Follow Me</h4>
+                <div class="flex justify-center gap-6">
                     <a class="social-media" href="https://www.facebook.com/arion.paul.3">
                         <i class="icon-facebook-f"></i>
                     </a>
@@ -211,13 +206,12 @@
                         <i class="icon-vk"></i>
                     </a>
                 </div>
-                <p class="text-center mb-0 mt-4 pt-2">Copyright ©2020
+                <p class="text-center dark:text-gray-200 mb-0 mt-6 pt-2">Copyright ©2020
                     <span style="color: #4458dc;">DouxCode</span> Allrights reserved
                 </p>
             </div>
         </div>
     </footer>
 </body>
-<script src="js/app.js"></script>
-
+<script src="js/main.js"></script>
 </html>
