@@ -25,7 +25,6 @@ for (var i = 0, s = dropdown_btns.length; i < s; i++) {
             }, 300)
         }
         else {
-            // dropdown_active.style.cssText = 'heght'
             dropdown_active.style.cssText = `height: ${dropdown_active_height}px`
             setTimeout(() => {
                 dropdown_active.style.cssText = 'heght'
@@ -33,6 +32,20 @@ for (var i = 0, s = dropdown_btns.length; i < s; i++) {
         }
 
         dropdown_active.classList.toggle('collapsed')
+    })
+}
+
+var nav_links = document.getElementsByClassName('nav-link');
+
+for (nav_link of nav_links) {
+    nav_link.addEventListener("click", function (event) { 
+        var dropdown_id = event.currentTarget.closest(".navbar-collapse").id
+    
+        for (dropdown_btn of dropdown_btns) {
+            if (dropdown_btn.getAttribute("data-target") == `#${dropdown_id}`) {
+                dropdown_btn.click()
+            }
+        }
     })
 }
 
