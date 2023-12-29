@@ -1,0 +1,10 @@
+{
+    "title": "Modern website made with SCSS, HTML and SVG icons",
+    "description": "This website featuring WebP images, SASS and HTML. <br> Directed by University GeekBrains.",
+    "date": {
+        "day": "21",
+        "month": "September",
+        "year": "2021"
+    },
+    "image": "proweb.png"
+}

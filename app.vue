@@ -220,44 +220,45 @@
         id="myworks"
         class="container mx-auto mt-12 py-12">
         <h2 class="mb-12 text-center text-3xl font-medium lg:text-start dark:text-white">My projects</h2>
-        <div class="flex flex-col gap-12">
-            <div
-                class="flex flex-col lg:flex-row"
-                v-for="myWork in myWorks">
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            <ContentList
+                path="/my-works"
+                v-slot="{ list }">
+                <!-- <div
+                    v-for="myWork in list"
+                    :key="myWork._path">
+                    <h2>{{ myWork.title }}</h2>
+                    <p>{{ myWork.description }}</p>
+                </div> -->
                 <div
-                    class="order-last shrink-0 border border-neutral-800 bg-zinc-950 p-4 max-lg:rounded-b-lg lg:order-first lg:w-1/3 lg:rounded-s-lg xl:w-1/4">
-                    <div class="mb-12">
-                        <h5 class="mb-2 text-xl font-medium text-neutral-800 dark:text-white">{{ myWork.title }}</h5>
-                        <p
-                            class="card-text text-neutral-800 dark:text-zinc-300"
-                            v-html="myWork.text"></p>
+                    class="row-span-5 grid gap-0 overflow-hidden rounded-lg border border-neutral-800 bg-zinc-950 [grid-template-rows:subgrid]"
+                    v-for="myWork in list"
+                    :key="myWork._path">
+                    <div class="overflow-hidden">
+                        <NuxtImg
+                            :src="'images/' + myWork.image"
+                            class="h-full w-full object-cover" />
                     </div>
-                    <p class="text-zinc-400">
+                    <h5 class="row-span-1 mb-2 px-4 pt-4 text-xl font-medium text-neutral-800 dark:text-white">{{ myWork.title }}</h5>
+                    <p
+                        class="row-span-1 mb-6 px-4 text-neutral-800 dark:text-zinc-300"
+                        v-html="myWork.description"></p>
+                    <p class="row-span-1 px-4 pb-4 text-zinc-400">
                         <small>{{ myWork.date.day }}<sup>th</sup> {{ myWork.date.month }} {{ myWork.date.year }}</small>
                     </p>
                 </div>
-                <div class="overflow-hidden max-lg:rounded-t-lg lg:rounded-e-lg">
-                    <NuxtImg :src="'images/' + myWork.image" />
-                </div>
-            </div>
-            <div class="flex flex-col lg:flex-row">
-                <div
-                    class="order-last shrink-0 border border-neutral-800 bg-zinc-950 p-4 max-lg:rounded-b-lg lg:order-first lg:w-1/3 lg:rounded-s-lg xl:w-1/4">
-                    <div class="mb-12">
-                        <h5 class="mb-2 text-xl font-medium text-neutral-800 dark:text-white">Coming soon</h5>
-                    </div>
-                </div>
-                <div
-                    class="card-image h-72 overflow-hidden max-lg:rounded-t-lg lg:rounded-e-lg xl:h-96"
-                    style="background-color: #110f28">
+            </ContentList>
+            <div
+                class="row-span-5 grid gap-0 overflow-hidden rounded-lg border border-neutral-800 bg-zinc-950 [grid-template-rows:subgrid]">
+                <div class="max-h-48 overflow-hidden bg-[#110f28] 2xl:max-h-56">
                     <LottieAnimation
                         class="h-full"
                         :animation-data="SleepyJSON"
                         :auto-play="true"
                         :loop="true"
-                        :speed="1"
-                        ref="anim" />
+                        :speed="1" />
                 </div>
+                <h5 class="row-span-1 mb-2 px-4 pt-4 text-xl font-medium text-neutral-800 dark:text-white">Coming soon</h5>
             </div>
         </div>
     </section>
@@ -272,29 +273,6 @@ const isMenuOpen = ref(false);
 const ImgURL = (image) => {
     return new URL(`./assets/svg/${image}`, import.meta.url).href;
 };
-
-const myWorks = [
-    {
-        title: "Website made with CSS and HTML",
-        text: "A simple website, made with only CSS and HTML. <br> Directed by University GeekBrains.",
-        date: {
-            day: "10",
-            month: "August",
-            year: "2019",
-        },
-        image: "firstweb.png",
-    },
-    {
-        title: "Website made with CSS and HTML",
-        text: "A simple website, made with only CSS and HTML. <br> Directed by University GeekBrains.",
-        date: {
-            day: "21",
-            month: "September",
-            year: "2021",
-        },
-        image: "proweb.png",
-    },
-];
 
 useHead({
     title: "Arion Paul",

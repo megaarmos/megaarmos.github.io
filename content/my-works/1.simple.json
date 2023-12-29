@@ -1,0 +1,10 @@
+{
+    "title": "Website made with CSS and HTML",
+    "description": "A simple website, made with only CSS and HTML. <br> Directed by University GeekBrains.",
+    "date": {
+        "day": "10",
+        "month": "August",
+        "year": "2019"
+    },
+    "image": "firstweb.png"
+}
