@@ -8,7 +8,7 @@
                 href="#">
                 <img
                     class="py-1.5"
-                    src="public/images/logo.svg"
+                    src="assets/svg/logo.svg"
                     alt="ARION PAUL" />
             </a>
             <button
@@ -106,7 +106,7 @@
                 <div class="hidden w-5/12 lg:block">
                     <img
                         class="w-full"
-                        src="public/images/coding.svg"
+                        src="assets/svg/coding.svg"
                         alt="coding image" />
                 </div>
             </div>
@@ -120,7 +120,7 @@
                 <div class="hidden w-6/12 lg:block">
                     <img
                         class="w-full pr-12"
-                        src="public/images/table.svg"
+                        src="assets/svg/table.svg"
                         alt="sitting image" />
                 </div>
                 <div class="w-full lg:w-6/12">
@@ -156,7 +156,7 @@
                                 width="120px"
                                 height="120px"
                                 class="p-3 grayscale transition-[filter] duration-300 hover:grayscale-0 md:p-4"
-                                src="public/images/vue.svg"
+                                src="assets/svg/vue.svg"
                                 alt="" />
                         </div>
                         <div class="flex justify-center border border-neutral-400">
@@ -164,7 +164,7 @@
                                 width="120px"
                                 height="120px"
                                 class="p-3 grayscale transition-[filter] duration-300 hover:grayscale-0 md:p-4"
-                                src="public/images/nuxt.svg"
+                                src="assets/svg/nuxt.svg"
                                 alt="" />
                         </div>
                         <div class="flex justify-center border border-neutral-400">
@@ -172,7 +172,7 @@
                                 width="120px"
                                 height="120px"
                                 class="p-3 grayscale transition-[filter] duration-300 hover:grayscale-0 md:p-4"
-                                src="public/images/react.svg"
+                                src="assets/svg/react.svg"
                                 alt="" />
                         </div>
                         <div class="flex justify-center border border-neutral-400">
@@ -180,7 +180,7 @@
                                 width="120px"
                                 height="120px"
                                 class="p-3 brightness-50 grayscale transition-[filter] duration-300 hover:brightness-100 hover:grayscale-0 md:p-4"
-                                src="public/images/ionic_light.svg"
+                                src="assets/svg/ionic_light.svg"
                                 alt="" />
                         </div>
                         <div class="flex justify-center border border-neutral-400">
@@ -188,7 +188,7 @@
                                 width="120px"
                                 height="120px"
                                 class="p-3 grayscale transition-[filter] duration-300 hover:grayscale-0 md:p-4"
-                                src="public/images/tailwind.svg"
+                                src="assets/svg/tailwind.svg"
                                 alt="" />
                         </div>
                     </div>
@@ -237,10 +237,7 @@
                     </p>
                 </div>
                 <div class="overflow-hidden max-lg:rounded-t-lg lg:rounded-e-lg">
-                    <img
-                        :src="myWork.image"
-                        class=""
-                        alt="..." />
+                    <NuxtImg :src="'images/' + myWork.image" />
                 </div>
             </div>
             <div class="flex flex-col lg:flex-row">
@@ -273,7 +270,7 @@ const navbar = ref(null);
 const isMenuOpen = ref(false);
 
 const ImgURL = (image) => {
-    return new URL(`./public/images/${image}`, import.meta.url).href;
+    return new URL(`./assets/svg/${image}`, import.meta.url).href;
 };
 
 const myWorks = [
@@ -285,7 +282,7 @@ const myWorks = [
             month: "August",
             year: "2019",
         },
-        image: ImgURL("firstweb.png"),
+        image: "firstweb.png",
     },
     {
         title: "Website made with CSS and HTML",
@@ -295,7 +292,7 @@ const myWorks = [
             month: "September",
             year: "2021",
         },
-        image: ImgURL("proweb.png"),
+        image: "proweb.png",
     },
 ];
 
