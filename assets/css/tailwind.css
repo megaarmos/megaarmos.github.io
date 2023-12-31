@@ -65,6 +65,6 @@
     }
 
     .border-graient {
-        @apply border-2 border-transparent dark:[background:linear-gradient(theme(colors.zinc.900),theme(colors.zinc.900))_padding-box,linear-gradient(to_right,theme(colors.indigo.600),theme(colors.violet.500))border-box];
+        @apply border-2 border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(to_right,theme(colors.indigo.600),theme(colors.violet.500))border-box] dark:[background:linear-gradient(theme(colors.zinc.900),theme(colors.zinc.900))_padding-box,linear-gradient(to_right,theme(colors.indigo.600),theme(colors.violet.500))border-box];
     }
 }
