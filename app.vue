@@ -261,7 +261,7 @@
                     </div>
                     <div class="mt-12 flex items-start justify-center lg:mt-0 lg:w-5/12 lg:justify-end xl:w-4/12 2xl:w-3/12">
                         <div
-                            class="relative max-w-80 bg-white p-6 before:absolute before:hidden before:w-40 after:hidden before:sm:block after:sm:block md:p-12 dark:bg-zinc-950">
+                            class="relative max-w-96 bg-white p-6 before:absolute before:hidden before:w-40 after:hidden before:sm:block after:sm:block md:p-12 dark:bg-zinc-950">
                             <div class="relative z-10 mb-4 flex items-center justify-center gap-6 pb-12">
                                 <h2 class="text-8xl font-medium text-indigo-500">2</h2>
                                 <p class="text-xl font-medium uppercase text-neutral-800 dark:text-neutral-50">
@@ -271,7 +271,11 @@
                                 </p>
                             </div>
                             <div class="flex items-center gap-4 pt-6">
-                                <i class="icon-envelope-open text-5xl text-neutral-800 md:text-6xl dark:text-neutral-100"></i>
+                                <Icon
+                                    name="uil:envelope-open"
+                                    size="48px"
+                                    class="text-neutral-800 dark:text-neutral-100" />
+                                <!-- <i class="icon-envelope-open text-5xl text-neutral-800 md:text-6xl dark:text-neutral-100"></i> -->
                                 <div>
                                     <p class="text-uppercase text-neutral-800 dark:text-neutral-50">MY email</p>
                                     <p class="font-medium text-neutral-800 dark:text-neutral-50">paularion007@gmail.com</p>
