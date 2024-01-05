@@ -1,7 +1,7 @@
 <template>
     <nav
         class="sticky top-0 z-50 w-full bg-zinc-100 py-2 shadow-lg transition-shadow duration-300 dark:bg-zinc-900"
-        :class="isNavbarSticky ? 'shadow-neutral-200 dark:shadow-zinc-700' : 'shadow-transparent'">
+        :class="enableNavabarShadow || isMenuOpen ? 'shadow-neutral-200 dark:shadow-zinc-700' : 'shadow-transparent'">
         <div class="container mx-auto flex flex-wrap items-center justify-between">
             <a
                 class=""
@@ -64,7 +64,7 @@
                         <a
                             class="block border-b border-zinc-400 py-4 font-medium transition-colors duration-300 hover:text-indigo-600 lg:border-b-0 lg:px-2 dark:border-zinc-600 dark:text-white dark:hover:text-indigo-400 [.active_&]:text-indigo-600 dark:[.active_&]:text-indigo-400"
                             href="#myworks">
-                            MY WORKS
+                            MY PROJECTS
                         </a>
                     </li>
                     <li class="nav-item">
@@ -98,7 +98,7 @@
                             <a
                                 href="#myworks"
                                 class="border-graient relative rounded-lg px-4 text-sm font-medium leading-9 transition-colors before:absolute before:inset-0 before:z-10 before:block before:rounded-sm before:bg-gradient-to-r before:from-indigo-600 before:to-violet-500 before:opacity-0 before:transition-opacity before:duration-300 hover:text-white hover:before:opacity-100 sm:px-7 sm:leading-[46px] dark:text-white">
-                                <span class="relative z-20">MY WORKS</span>
+                                <span class="relative z-20">MY PROJECTS</span>
                             </a>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             alt="sitting image" />
                     </div>
                     <div class="w-full lg:w-6/12">
-                        <h2 class="mb-4 text-3xl font-medium dark:text-white">Let me introduce myself</h2>
+                        <h2 class="mb-4 text-3xl font-medium dark:text-white">LET ME INTRODUCE MYSELF</h2>
                         <p class="mb-12 text-zinc-500 dark:text-zinc-300">
                             My name is Arion, and I'm a frontend developer. My job is to create impressive visual for websites. I read a lot
                             articles and keep track of new technologies to make my products better.
@@ -275,7 +275,6 @@
                                     name="uil:envelope-open"
                                     size="48px"
                                     class="text-neutral-800 dark:text-neutral-100" />
-                                <!-- <i class="icon-envelope-open text-5xl text-neutral-800 md:text-6xl dark:text-neutral-100"></i> -->
                                 <div>
                                     <p class="text-uppercase text-neutral-800 dark:text-neutral-50">MY email</p>
                                     <p class="font-medium text-neutral-800 dark:text-neutral-50">paularion007@gmail.com</p>
@@ -289,13 +288,13 @@
         <section
             id="myworks"
             class="container mx-auto mb-12 mt-12 py-12">
-            <h2 class="mb-12 text-center text-3xl font-medium lg:text-start dark:text-white">My projects</h2>
-            <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            <h2 class="mb-12 text-center text-3xl font-medium lg:text-start dark:text-white">MY PROJECTS</h2>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <ContentList
                     path="/my-works"
                     v-slot="{ list }">
                     <div
-                        class="row-span-5 grid gap-0 overflow-hidden rounded-lg border border-neutral-300 bg-white [grid-template-rows:subgrid] dark:border-neutral-800 dark:bg-zinc-950"
+                        class="row-span-4 grid gap-0 overflow-hidden rounded-lg border border-neutral-300 bg-white [grid-template-rows:subgrid] dark:border-neutral-800 dark:bg-zinc-950"
                         v-for="myWork in list"
                         :key="myWork._path">
                         <div class="overflow-hidden">
@@ -313,7 +312,7 @@
                     </div>
                 </ContentList>
                 <div
-                    class="row-span-5 grid gap-0 overflow-hidden rounded-lg border border-neutral-300 bg-white [grid-template-rows:subgrid] dark:border-neutral-800 dark:bg-zinc-950">
+                    class="row-span-4 grid gap-0 overflow-hidden rounded-lg border border-neutral-300 bg-white [grid-template-rows:subgrid] dark:border-neutral-800 dark:bg-zinc-950">
                     <div class="max-h-48 overflow-hidden bg-[#110f28] 2xl:max-h-56">
                         <LottieAnimation
                             class="h-full"
@@ -415,7 +414,7 @@ import SleepyJSON from "~/assets/sleepy.json";
 
 const { vScrollSpy, vScrollSpyLink, vScrollSpyActive } = useScrollSpy();
 
-const isNavbarSticky = ref(false);
+const enableNavabarShadow = ref(false);
 const isMenuOpen = ref(false);
 
 useHead({
@@ -431,10 +430,10 @@ useHead({
 });
 
 onMounted(() => {
-    isNavbarSticky.value = window.scrollY > 0;
+    enableNavabarShadow.value = window.scrollY > 0;
 
     window.addEventListener("scroll", () => {
-        isNavbarSticky.value = window.scrollY > 0;
+        enableNavabarShadow.value = window.scrollY > 0;
     });
 });
 </script>
