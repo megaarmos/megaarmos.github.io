@@ -5,6 +5,8 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  ssr: false,
+
   app: {
     head: {
       title: "Arion Paul",

@@ -45,17 +45,17 @@ const techStack = [
   {
     category: "Frontend",
     icon: Layout,
-    skills: ["Vue.js", "React", "TypeScript", "Tailwind CSS", "Nuxt.js", "Framer Motion"],
+    skills: ["Vue.js", "Nuxt.js", "React", "TypeScript", "Tailwind CSS", "HTML", "CSS"],
   },
   {
     category: "Backend",
     icon: Database,
-    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Python", "Firebase"],
+    skills: ["Node.js", "Nuxt.js", "Laravel", "PostgreSQL", "MySQL"],
   },
   {
     category: "Tools & DevOps",
     icon: Terminal,
-    skills: ["Git", "Docker", "AWS", "Figma", "CI/CD", "Jest"],
+    skills: ["Git", "Docker", "Figma", "CI/CD", "Vite", "Coolify"],
   },
 ];
 
@@ -108,11 +108,20 @@ const badgeClass =
 
             <div class="flex items-center gap-4">
               <div class="hidden lg:flex items-center gap-3 pr-4 border-r border-white/10">
-                <a href="#" class="text-white/60 hover:text-violet-700 transition-colors"><Icon name="simple-icons:github" :size="20" /></a>
-                <a href="#" class="text-white/60 hover:text-violet-700 transition-colors">
+                <a
+                  href="https://github.com/megaarmos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white/60 hover:text-violet-700 transition-colors">
+                  <Icon name="simple-icons:github" :size="20" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/arionpaul/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white/60 hover:text-violet-700 transition-colors">
                   <Icon name="simple-icons:linkedin" :size="20" />
                 </a>
-                <a href="#" class="text-white/60 hover:text-violet-700 transition-colors"><Icon name="lucide:mail" :size="20" /></a>
               </div>
 
               <UiButton as="a" href="#contact"> Hire Me </UiButton>
@@ -136,9 +145,16 @@ const badgeClass =
             {{ link }}
           </a>
           <div class="flex gap-4 py-4 border-t border-white/10 justify-center">
-            <a href="#" class="text-white/60 hover:text-violet-700"><Github :size="24" /></a>
-            <a href="#" class="text-white/60 hover:text-violet-700"><Linkedin :size="24" /></a>
-            <a href="#" class="text-white/60 hover:text-violet-700"><Mail :size="24" /></a>
+            <a href="https://github.com/megaarmos" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-violet-700">
+              <Icon name="simple-icons:github" :size="24" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/arionpaul/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white/60 hover:text-violet-700">
+              <Icon name="simple-icons:linkedin" :size="24" />
+            </a>
           </div>
         </GlassCard>
       </div>
@@ -203,8 +219,8 @@ const badgeClass =
                 </div>
               </GlassCard>
 
-              <GlassCard variant="light" class="absolute right-0 translate-x-1/3 top-12 p-2 lg:p-4">
-                <div class="flex items-center gap-2 lg:gap-3">
+              <GlassCard variant="light" class="absolute -right-3 -top-5 sm:right-0 sm:translate-x-1/3 sm:top-12 p-2.5">
+                <div class="flex items-center gap-3">
                   <div class="p-1 lg:p-2 bg-blue-500/20 rounded-lg text-blue-400"><Code2 :size="20" /></div>
                   <div>
                     <div class="text-xs text-white/50">Experience</div>
@@ -371,56 +387,3 @@ const badgeClass =
     </footer>
   </div>
 </template>
-
-<style>
-.bg-noise {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 50;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-@keyframes float {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-.animate-float-slow {
-  animation: float 15s ease-in-out infinite;
-}
-.animate-float-medium {
-  animation: float 10s ease-in-out infinite;
-}
-.animate-float-fast {
-  animation: float 7s ease-in-out infinite;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0f172a;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-</style>
