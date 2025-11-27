@@ -114,8 +114,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground min-h-screen;
+    @apply bg-background text-foreground min-h-screen scroll-smooth;
   }
 }
 
@@ -125,17 +130,17 @@
   max-width: 100%;
 
   @variant sm {
-    padding-inline: 1rem;
+    padding-inline: 2rem;
     max-width: 100%;
   }
 
   @variant md {
-    padding-inline: 1.25rem;
+    padding-inline: 3rem;
     max-width: 100%;
   }
 
   @variant lg {
-    padding-inline: 3rem;
+    padding-inline: 4rem;
     max-width: 1200px;
   }
 }
