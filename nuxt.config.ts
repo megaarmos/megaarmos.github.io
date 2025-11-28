@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  ssr: false,
+  ssr: true,
 
   app: {
     head: {
@@ -22,5 +22,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
+  modules: ["@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/tailwindcss", "shadcn-nuxt"],
 });
