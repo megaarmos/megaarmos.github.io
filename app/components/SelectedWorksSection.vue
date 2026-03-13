@@ -11,18 +11,18 @@ const projects = [
     image: "/images/e-commerce-website.png",
   },
   {
-    title: "Open-source component ",
+    title: "Open-source component",
     desc: "A component for vue to create a bottom sheet with a smooth animation.",
     tags: ["Vue.js", "HTML", "CSS"],
     link: "https://github.com/megaarmos/vue-spring-bottom-sheet",
     image: "/images/vsbs.png",
   },
   {
-    title: "Construction Firm Website",
-    desc: "A website for a construction firm with a modern design and a responsive layout.",
-    tags: ["HTML", "CSS"],
-    link: "https://indarbaev.store/",
-    image: "/images/indarbaev.png",
+    title: "Dancing Instructor Website",
+    desc: "A website for a dancing instructor with a modern design and a responsive layout.",
+    tags: ["Vue.js", "Laravel", "Tailwind CSS"],
+    link: "https://dancingdita.com/",
+    image: "/images/dancingdita.png",
   },
 ];
 
